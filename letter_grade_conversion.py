@@ -11,7 +11,7 @@ class School:
     def __init__(self):
         pass
 
-    def calculate_letter_grade(grade_percentage: int) -> LetterGrade:
+    def calculate_letter_grade(self, grade_percentage: int) -> LetterGrade:
         if grade_percentage >= 90:
             return LetterGrade.A
         elif grade_percentage >= 80:
