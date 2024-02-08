@@ -12,20 +12,17 @@ class School:
         pass
 
     def calculate_letter_grade(grade_percentage: int) -> LetterGrade:
-        match grade_percentage:
-            case grade_percentage >= 90:
-                return LetterGrade.A
-            case grade_percentage >= 80:
-                return LetterGrade.B
-            case grade_percentage >= 70:
-                return LetterGrade.C
-            case grade_percentage >= 60:
-                return LetterGrade.D
-            case grade_percentage < 60:
-                return LetterGrade.F
-            case _:
-                return "Invalid grade percentage"
-
+        if grade_percentage >= 90:
+            return LetterGrade.A
+        elif grade_percentage >= 80:
+            return LetterGrade.B
+        elif grade_percentage >= 70:
+            return LetterGrade.C
+        elif grade_percentage >= 60:
+            return LetterGrade.D
+        else:
+            return LetterGrade.F
+        
 def main():
     school = School()
     grade = school.calculate_letter_grade(78)
